@@ -24,6 +24,9 @@ class Backend(QObject):
         auth_thread.start()
 
     def _authenticate(self, email, passcode):
+        sleep(1)
+
+        self.authenticated.emit(email)
 
         conn = sqlite3.connect('signin.db')
         cursor = conn.cursor()

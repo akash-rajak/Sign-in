@@ -31,9 +31,10 @@ Component {
         }
 
         ColumnLayout {
-            anchors.centerIn:parent
+            anchors.centerIn: parent
             width: 240
             spacing: 24
+
 
             Text {
                 Layout.fillWidth: true
@@ -44,7 +45,6 @@ Component {
                 horizontalAlignment: Text.AlignHCenter
                 Layout.bottomMargin: 128
             }
-
 
             CustTextField {
                 id: email_field
@@ -57,31 +57,31 @@ Component {
                 echoMode: TextField.Password
             }
 
-            Button {
+            Button{
                 Layout.fillWidth: true
-                text: "Sign In"
+                text:"Sign In"
 
-                background: Rectangle {
-                    color: "transparent"
+                background: Rectangle{
+                    color:"transparent"
                 }
 
-                contentItem: Text {
-                    text: parent.text
+                contentItem: Text{
+                    text:parent.text
                     color: parent.hovered ? "#77ffffff" : "white"
                     font.pixelSize: 12
                     horizontalAlignment: Text.AlignHCenter
                 }
 
                 onClicked:  {
-                    stack.push(welcPage)
-//                    rot_cont.visible = true
-//                    rot_anima.running = true
-//                    backend.authenticate(email_field.text, passcode_field.text)
+                    //stack.push(welcPage)
+                    rot_cont.visible = true
+                    rot_anima.running = true
+                    backend.authenticate(email_field.text, passcode_field.text)
                 }
-
             }
 
         }
+
 
         Rectangle {
             id: rot_cont

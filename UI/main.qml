@@ -7,8 +7,8 @@ ApplicationWindow {
     height: 512
     title: "Sign In"
 
-//    property string username: ""
-//    property QtObject backend
+    property string username: ""
+    property QtObject backend
 
     StackView {
         id: stack
@@ -19,14 +19,14 @@ ApplicationWindow {
 
     WelcomPage { id: welcPage; }
 
-//    Connections {
-//        target: backend
+    Connections {
+        target: backend
 
-//        function onAuthenticated(user) {
-//            username = user
-//            stack.currentItem.connector()
-//        }
+        function onAuthenticated(user) {
+            username = user
+            stack.currentItem.connector()
+            //console.log(user)
+        }
 
-//    }
-
+    }
 }
