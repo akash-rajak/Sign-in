@@ -6,7 +6,7 @@
 ****
 
 <p align = "center">
-	<img src = "images/1.png">
-	<img src = "images/2.png">
-	<img src = "images/3.png">
+	<img height = 500 width = 500 src = "images/1.png">
+	<img height = 500 width = 500 src = "images/2.png">
+	<img height = 500 width = 500 src = "images/3.png">
 </p>
