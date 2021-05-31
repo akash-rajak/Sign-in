@@ -13,7 +13,7 @@ def insert_user():
     hlib.update('abcdef'.encode('utf-8'))
     hash_passcode = hlib.hexdigest()
 
-    sql1 = f''' INSERT INTO USER VALUES ("amoh","email@gmail.com", "{hash_passcode}") '''
+    sql1 = f''' INSERT INTO USER VALUES ("Akash","email@gmail.com", "{hash_passcode}") '''
     cursor.execute(sql1)
     conn.commit()
 
